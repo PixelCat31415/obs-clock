@@ -1,0 +1,69 @@
+:root {
+    --color_background: #dae3ed;
+    --color_foreground: #1e1d1a;
+    --color_foreground_light: #514f4a;
+    --color_red: #F40000;
+    --color_green: #4E9A05;
+}
+
+html, body {
+    margin: 0;
+}
+
+#box_clock {
+    background: var(--color_background);
+    border-radius: 20px;
+    color: var(--color_foreground);
+    font-family: 'ubuntu';
+
+    width: 450px;
+    height: 250px;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.row {
+    width: 100%;
+    text-align: center;
+}
+
+.row.text {
+    height: 40px;
+    flex: 0 0 auto;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color_foreground_light);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row.container_clock {
+    flex: 1 1 auto;
+    display: flex;
+    font-size: 105px;
+    font-weight: 900;
+}
+.clock {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row.container_progress {
+    height: 10px;
+    flex: 0 0 auto;
+    display: flex;
+}
+.progress {
+    height: 100%;
+}
+#progress1 {
+    background: var(--color_red);
+}
+#progress2 {
+    background: var(--color_green);
+}

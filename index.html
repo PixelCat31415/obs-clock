@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./build/require.js"></script>
+    </head>
+    <body>
+        <div id="box_clock">
+            <div class="row text" id="text1"></div>
+            <div class="row container_clock" id="clock">
+                <span class="clock" id="clock1"></span>
+                <span class="clock" id="clock2"></span>
+                <span class="clock" id="clock3"></span>
+            </div>
+            <div class="row container_progress" id="progress">
+                <div class="progress" id="progress1"></div>
+                <div class="progress" id="progress2"></div>
+            </div>
+            <div class="row text" id="text2"></div>
+        </div>
+        <script>
+            require(["build/domReady", "build/main"], function (
+                domReady,
+                main
+            ) {
+                domReady(function () {
+                    main.main();
+                });
+            });
+        </script>
+    </body>
+</html>
