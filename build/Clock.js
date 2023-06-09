@@ -6,7 +6,7 @@ define(["require", "exports", "./Ui"], function (require, exports, Ui_1) {
     class Clock {
         render() {
             let time = new Date(Date.now());
-            let date = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()}`;
+            let date = `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()}`;
             Ui_1.ui.setMessage("text1", date);
             Ui_1.ui.setMessage("text2", "clock");
             Ui_1.ui.setNumber("clock1", time.getHours());

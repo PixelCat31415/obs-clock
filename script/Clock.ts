@@ -6,7 +6,7 @@ import { ui } from "./Ui";
 export class Clock implements Gadget {
     public render() {
         let time = new Date(Date.now());
-        let date = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()}`;
+        let date = `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()}`;
         ui.setMessage("text1", date);
         ui.setMessage("text2", "clock");
         ui.setNumber("clock1", time.getHours());
